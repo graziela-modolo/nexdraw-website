@@ -332,11 +332,31 @@
             color: var(--branco);
             padding: 5rem 2rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-final::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -5%;
+            transform: translateY(-50%);
+            width: 350px;
+            height: 350px;
+            background-image: url('logo-nexdraw.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.08;
+            z-index: 0;
+            pointer-events: none;
         }
 
         .cta-final-content {
             max-width: 700px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .cta-final h2 {
@@ -396,6 +416,13 @@
 
         .footer-section a:hover {
             color: var(--azul-marinho);
+        }
+
+        .logo-footer {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 1rem;
         }
 
         .footer-bottom {
@@ -608,7 +635,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>NexDraw</h4>
+                <img src="logo-nexdraw.png" alt="NexDraw Logo" class="logo-footer">
                 <p>Inteligência em Drawback para empresas exportadoras.</p>
             </div>
             <div class="footer-section">
