@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexDraw - Inteligência em Drawback</title>
+    <title>NexDraw | Consultoria e Treinamento em Drawback para Indústrias Exportadoras</title>
+    <meta name="description" content="Assessoria em regime de drawback: enquadramento, ato concessório e comprovação no Siscomex. Diagnóstico de elegibilidade gratuito para indústrias exportadoras.">
+    <link rel="canonical" href="https://www.nexdraw.com.br/">
     <style>
         * {
             margin: 0;
@@ -65,7 +67,7 @@
             text-decoration: none;
             color: var(--cinza-texto);
             font-size: 0.95rem;
-            font-weight: 499;
+            font-weight: 500;
             transition: color 0.3s ease;
             position: relative;
         }
@@ -604,6 +606,332 @@
                 opacity: 0.05;
             }
         }
+
+        /* ===== NOVOS BLOCOS ===== */
+
+        /* Linha de autoridade no hero */
+        .hero-trust {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--cinza-texto);
+            letter-spacing: 0.2px;
+        }
+
+        .hero-trust span {
+            white-space: nowrap;
+        }
+
+        .hero-trust .sep {
+            color: var(--dourado-principal);
+            margin: 0 0.7rem;
+        }
+
+        /* Seção "O que é" */
+        .regime {
+            padding: 5rem 2rem;
+            background-color: var(--branco);
+        }
+
+        .regime-content {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .regime-content p {
+            font-size: 1.05rem;
+            margin-bottom: 1.3rem;
+            line-height: 1.85;
+        }
+
+        .legal-note {
+            margin-top: 2rem;
+            padding: 1.2rem 1.5rem;
+            border-left: 3px solid var(--dourado-principal);
+            background-color: var(--cinza-claro);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .legal-note strong {
+            color: var(--azul-marinho);
+        }
+
+        /* Para quem serve / não serve */
+        .publico {
+            padding: 5rem 2rem;
+            background-color: var(--cinza-claro);
+        }
+
+        .publico-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .publico-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .publico-card {
+            background-color: var(--branco);
+            border: 1px solid var(--cinza-linha);
+            border-radius: 10px;
+            padding: 2.2rem;
+        }
+
+        .publico-card h3 {
+            font-size: 1.15rem;
+            color: var(--azul-marinho);
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+
+        .publico-card ul {
+            list-style: none;
+        }
+
+        .publico-card li {
+            font-size: 0.95rem;
+            padding: 0.55rem 0;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.6;
+        }
+
+        .publico-card li::before {
+            font-weight: bold;
+            margin-right: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .publico-card.sim li::before {
+            content: '✓';
+            color: var(--dourado-principal);
+        }
+
+        .publico-card.nao li::before {
+            content: '—';
+            color: #B4B4B4;
+        }
+
+        /* Etapas */
+        .etapas {
+            padding: 5rem 2rem;
+            background-color: var(--branco);
+        }
+
+        .etapas-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .etapas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .etapa {
+            padding: 1.8rem 0 0 0;
+            border-top: 3px solid var(--cinza-linha);
+            transition: border-color 0.3s ease;
+        }
+
+        .etapa:hover {
+            border-top-color: var(--dourado-principal);
+        }
+
+        .etapa-num {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--dourado-principal);
+            letter-spacing: 1.5px;
+            margin-bottom: 0.6rem;
+        }
+
+        .etapa h3 {
+            font-size: 1.1rem;
+            color: var(--azul-marinho);
+            margin-bottom: 0.7rem;
+            font-weight: 700;
+        }
+
+        .etapa p {
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        /* Quem conduz */
+        .autor {
+            padding: 5rem 2rem;
+            background-color: var(--cinza-claro);
+        }
+
+        .autor-container {
+            max-width: 880px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .autor-foto {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--branco);
+            box-shadow: 0 6px 20px rgba(0, 27, 79, 0.12);
+        }
+
+        .autor-texto h2 {
+            font-size: 1.9rem;
+            color: var(--azul-marinho);
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+
+        .autor-cargo {
+            color: var(--dourado-principal);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .autor-texto p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .autor-link {
+            color: var(--azul-marinho);
+            font-weight: 600;
+            font-size: 0.92rem;
+            text-decoration: none;
+            border-bottom: 1px solid var(--dourado-principal);
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 5rem 2rem;
+            background-color: var(--branco);
+        }
+
+        .faq-container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .faq details {
+            border-bottom: 1px solid var(--cinza-linha);
+            padding: 1.4rem 0;
+        }
+
+        .faq summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--azul-marinho);
+            font-size: 1.02rem;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .faq summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq summary::after {
+            content: '+';
+            color: var(--dourado-principal);
+            font-size: 1.5rem;
+            font-weight: 400;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .faq details[open] summary::after {
+            content: '−';
+        }
+
+        .faq details p {
+            margin-top: 0.9rem;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* Selo de garantia nos cards */
+        .garantia-nota {
+            font-size: 0.8rem;
+            color: var(--cinza-texto);
+            text-align: center;
+            margin-top: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Footer legal */
+        .footer-legal {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 1.5rem;
+            font-size: 0.8rem;
+            line-height: 1.7;
+            color: var(--cinza-texto);
+            text-align: center;
+        }
+
+        .footer-legal a {
+            color: var(--cinza-texto);
+            text-decoration: underline;
+        }
+
+        .footer-disclaimer {
+            font-style: italic;
+            margin-top: 0.8rem;
+            opacity: 0.85;
+        }
+
+        @media (max-width: 768px) {
+            .regime, .publico, .etapas, .autor, .faq {
+                padding: 3.5rem 2rem;
+            }
+
+            .autor-container {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+                text-align: center;
+                justify-items: center;
+            }
+
+            .hero-trust .sep {
+                display: block;
+                height: 0;
+                overflow: hidden;
+                margin: 0;
+            }
+
+            .hero-trust span {
+                display: block;
+                margin-bottom: 0.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .regime, .publico, .etapas, .autor, .faq {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .autor-foto {
+                width: 150px;
+                height: 150px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -614,9 +942,9 @@
                 <img src="logo-nexdraw.png" alt="NexDraw Logo" class="logo-img">
             </div>
             <ul>
-                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#regime">O Regime</a></li>
+                <li><a href="#produtos">Soluções</a></li>
                 <li><a href="#diagnostico">Diagnóstico</a></li>
-                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -624,9 +952,58 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Maximize seus lucros com <span class="highlight">Drawback</span></h1>
-            <p>Consultoria especializada em implantação de benefício fiscal que recupera impostos de exportação para empresas exportadoras.</p>
-            <a href="#diagnostico" class="cta-btn">Solicitar Diagnóstico Grátis</a>
+            <h1>Suspenda os tributos sobre os insumos que viram <span class="highlight">exportação</span></h1>
+            <p>Consultoria e treinamento em <strong>drawback</strong> para indústrias exportadoras — do enquadramento inicial ao ato concessório e à comprovação final no Siscomex, com segurança fiscal em cada etapa.</p>
+            <a href="https://wa.me/5551992370627?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20o%20diagn%C3%B3stico%20de%20elegibilidade%20para%20drawback." target="_blank" rel="noopener" class="cta-btn">Fazer o diagnóstico de elegibilidade</a>
+            <!-- Números confirmados pelo cliente em 27/07/2026. Atualize conforme evoluírem. -->
+            <p class="hero-trust">
+                <span>Mais de 10 anos em Comércio Exterior</span><span class="sep">•</span><span>Mais de 30 atos concessórios acompanhados</span><span class="sep">•</span><span>Atendimento remoto em todo o Brasil</span>
+            </p>
+        </div>
+    </section>
+
+    <div class="divider-line"></div>
+
+    <!-- O que é o regime -->
+    <section class="regime" id="regime">
+        <div class="regime-content">
+            <h2 class="section-title" style="margin-bottom: 3rem;">O Regime, em linguagem direta</h2>
+            <p>O drawback é um <strong>regime aduaneiro especial</strong> que desonera os insumos empregados na industrialização de produtos destinados à exportação. O benefício não incide sobre o ato de exportar: ele alcança o que entra na fábrica, sempre vinculado ao compromisso de exportar o produto acabado.</p>
+            <p>Nas modalidades <strong>suspensão</strong> e <strong>isenção</strong>, o regime pode alcançar Imposto de Importação, IPI, PIS/Pasep, Cofins, PIS/Cofins-Importação e AFRMM, além do ICMS conforme a legislação de cada estado.</p>
+            <p>Na prática, o ganho vem de três frentes: redução do custo do insumo, alívio de caixa ao longo do ciclo produtivo e maior competitividade do preço final no mercado externo. Em contrapartida, o regime exige controle rigoroso da vinculação entre insumo e produto exportado — e é aí que a maior parte das empresas encontra dificuldade.</p>
+            <!-- CONFERIR antes de publicar: valide a citação normativa com seu contador/advogado tributarista. Em site técnico, artigo errado custa mais caro que texto sem citação nenhuma. -->
+            <div class="legal-note">
+                <strong>Base legal:</strong> Lei nº 11.945/2009 (drawback integrado), Regulamento Aduaneiro (Decreto nº 6.759/2009) e Portaria SECEX vigente. A aplicação depende da análise da operação concreta.
+            </div>
+        </div>
+    </section>
+
+    <div class="divider-line"></div>
+
+    <!-- Para quem serve -->
+    <section class="publico">
+        <div class="publico-container">
+            <h2 class="section-title">Sua empresa se enquadra?</h2>
+            <p class="section-subtitle">Melhor descobrir agora do que depois de assumir um compromisso de exportação.</p>
+            <div class="publico-grid">
+                <div class="publico-card sim">
+                    <h3>Faz sentido avaliar se:</h3>
+                    <ul>
+                        <li>Sua empresa industrializa e exporta, de forma direta ou indireta</li>
+                        <li>Você importa ou compra no mercado interno insumos que integram o produto exportado</li>
+                        <li>Há previsibilidade de exportação nos próximos meses</li>
+                        <li>A empresa mantém regularidade fiscal e controle de estoque organizado</li>
+                    </ul>
+                </div>
+                <div class="publico-card nao">
+                    <h3>Provavelmente não é o seu caso se:</h3>
+                    <ul>
+                        <li>A operação é de revenda de produto importado, sem industrialização</li>
+                        <li>O que se exporta é serviço, e não mercadoria</li>
+                        <li>Não há como comprovar documentalmente a vinculação insumo → produto exportado</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -635,10 +1012,11 @@
     <!-- Diagnóstico -->
     <section class="diagnostico" id="diagnostico">
         <div class="diagnostico-content">
-            <span class="badge">100% GRATUITO</span>
-            <h2>Diagnóstico Inicial de Elegibilidade</h2>
-            <p>Descubra se sua empresa se qualifica para drawback e quanto em impostos pode recuperar. Análise realizada por especialistas em comércio exterior.</p>
-            <a href="#" class="cta-btn cta-secondary btn-com-seta">Comece Agora</a>
+            <span class="badge">SEM CUSTO E SEM COMPROMISSO</span>
+            <h2>Diagnóstico de Elegibilidade</h2>
+            <p>Em até <strong>3 dias úteis</strong> você recebe um parecer objetivo: se a operação se enquadra no regime, qual modalidade tende a ser mais vantajosa, a estimativa de desoneração sobre o seu volume de compras e o que precisa ser ajustado antes de solicitar o ato concessório.</p>
+            <p><strong>O que não fazemos:</strong> não vendemos nada na entrega do diagnóstico. Se a sua operação não se enquadra, essa será a resposta.</p>
+            <a href="https://wa.me/5551992370627?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20o%20diagn%C3%B3stico%20de%20elegibilidade%20para%20drawback." target="_blank" rel="noopener" class="cta-btn cta-secondary btn-com-seta">Enviar dados para análise</a>
         </div>
     </section>
 
@@ -648,51 +1026,59 @@
     <section class="produtos" id="produtos">
         <div class="produtos-container">
             <h2 class="section-title">Nossas Soluções</h2>
-            <p class="section-subtitle">Tudo o que sua empresa precisa para otimizar o drawback</p>
+            <p class="section-subtitle">Três formas de trabalhar o regime — da capacitação do time à implantação assistida</p>
 
             <div class="produtos-grid">
                 <!-- Curso -->
                 <div class="produto-card">
                     <div class="produto-icon">📚</div>
                     <h3>Curso Drawback Descomplicado</h3>
-                    <p>Aprenda como funcionam os mecanismos de drawback, legislação e conformidade fiscal.</p>
+                    <p>Para o time de comex, fiscal ou controladoria que precisa operar o regime sem depender de terceiros a cada passo.</p>
                     <ul>
-                        <li>Conteúdo prático</li>
-                        <li>Acesso lifetime</li>
-                        <li>Certificado incluído</li>
-                        <li>Suporte especializado</li>
+                        <li>Modalidades suspensão, isenção e restituição na prática</li>
+                        <li>Preenchimento do ato concessório e comprovação no Siscomex</li>
+                        <li>Os erros que mais geram exigência — e como evitá-los</li>
+                        <li>Acesso vitalício, com atualizações incluídas</li>
+                        <li>Certificado de conclusão (curso livre)</li>
                     </ul>
                     <div class="preco-produto">R$ 499</div>
-                    <a href="LINK_KIWIFY_CURSO_AQUI" target="_blank" class="cta-btn">Comprar Agora</a>
+                    <!-- TROCAR: cole aqui a URL real do produto na Kiwify. Enquanto não houver link, o botão aponta para o WhatsApp para não ficar quebrado. -->
+                    <a href="https://wa.me/5551992370627?text=Ol%C3%A1!%20Quero%20comprar%20o%20Curso%20Drawback%20Descomplicado." target="_blank" rel="noopener" class="cta-btn">Comprar agora</a>
+                    <p class="garantia-nota">Pagamento via Kiwify · Reembolso em até 7 dias (art. 49 do CDC)</p>
                 </div>
 
                 <!-- Consultoria -->
                 <div class="produto-card">
                     <div class="produto-icon">🎯</div>
                     <h3>Consultoria em Drawback</h3>
-                    <p>Implementação completa do benefício com acompanhamento de especialistas fiscais.</p>
+                    <p>Implantação assistida, do enquadramento da operação até a comprovação do regime.</p>
                     <ul>
-                        <li>Análise customizada</li>
-                        <li>Estratégia personalizada</li>
-                        <li>Implementação assistida</li>
-                        <li>Suporte contínuo</li>
+                        <li>Análise da operação e escolha da modalidade</li>
+                        <li>Estruturação da vinculação insumo × produto exportado</li>
+                        <li>Elaboração e acompanhamento do ato concessório</li>
+                        <li>Acompanhamento até a comprovação junto aos órgãos</li>
+                        <li>Escopo, prazo e honorários em proposta formal antes do início</li>
                     </ul>
-                    <a href="https://wa.me/5551992370627?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20consultoria%20em%20drawback" target="_blank" class="cta-btn" style="margin-top: 4.8rem;">💬 Conversar com Especialista</a>
+                    <a href="https://wa.me/5551992370627?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20consultoria%20em%20drawback." target="_blank" rel="noopener" class="cta-btn">💬 Falar com um especialista</a>
+                    <p class="garantia-nota">Sob orçamento, conforme porte e complexidade da operação</p>
                 </div>
 
                 <!-- Documentos -->
                 <div class="produto-card">
                     <div class="produto-icon">📊</div>
                     <h3>Kit Documentos + Planilha</h3>
-                    <p>Documentação padronizada e planilha de controle para gerenciar drawback.</p>
+                    <p>Para quem já opera o regime e precisa organizar o controle antes que ele vire problema na comprovação.</p>
                     <ul>
-                        <li>Documentos prontos</li>
-                        <li>Planilha automática</li>
-                        <li>Templates atualizados</li>
+                        <li>Planilha de controle de saldos e vinculação insumo × exportação</li>
+                        <li>Modelos de documentos e checklists de comprovação</li>
+                        <li>Instruções de uso passo a passo</li>
                         <li>Atualizações incluídas</li>
+                        <li>Entrega imediata após a confirmação do pagamento</li>
                     </ul>
                     <div class="preco-produto">R$ 299</div>
-                    <a href="LINK_KIWIFY_DOCUMENTOS_AQUI" target="_blank" class="cta-btn">Comprar Agora</a>
+                    <!-- TROCAR: cole aqui a URL real do produto na Kiwify. -->
+                    <a href="https://wa.me/5551992370627?text=Ol%C3%A1!%20Quero%20comprar%20o%20Kit%20Documentos%20%2B%20Planilha%20de%20Controle." target="_blank" rel="noopener" class="cta-btn">Comprar agora</a>
+                    <p class="garantia-nota">Pagamento via Kiwify · Reembolso em até 7 dias (art. 49 do CDC)</p>
                 </div>
             </div>
         </div>
@@ -700,12 +1086,76 @@
 
     <div class="divider-line"></div>
 
+    <!-- Como trabalhamos -->
+    <section class="etapas">
+        <div class="etapas-container">
+            <h2 class="section-title">Como trabalhamos</h2>
+            <p class="section-subtitle">Nenhuma etapa começa sem que a anterior esteja clara para você</p>
+            <div class="etapas-grid">
+                <div class="etapa">
+                    <div class="etapa-num">ETAPA 01</div>
+                    <h3>Diagnóstico</h3>
+                    <p>Analisamos a operação e dizemos, com franqueza, se existe benefício real a capturar.</p>
+                </div>
+                <div class="etapa">
+                    <div class="etapa-num">ETAPA 02</div>
+                    <h3>Proposta</h3>
+                    <p>Escopo, prazo e valores por escrito. Sem cobrança adicional fora do que foi combinado.</p>
+                </div>
+                <div class="etapa">
+                    <div class="etapa-num">ETAPA 03</div>
+                    <h3>Implantação</h3>
+                    <p>Habilitação, ato concessório e ajuste dos controles internos da empresa.</p>
+                </div>
+                <div class="etapa">
+                    <div class="etapa-num">ETAPA 04</div>
+                    <h3>Acompanhamento</h3>
+                    <p>Suporte até a comprovação do regime junto aos órgãos competentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    ============================================================
+    SEÇÃO DE RESULTADOS — descomente quando tiver casos reais.
+    É a seção que mais falta no site hoje. Não publique com dado
+    inventado: dois casos verdadeiros valem mais que dez genéricos.
+
+    <div class="divider-line"></div>
+
+    <section class="publico">
+        <div class="publico-container">
+            <h2 class="section-title">Resultados</h2>
+            <p class="section-subtitle">Casos reais, com números verificáveis</p>
+            <div class="publico-grid">
+                <div class="publico-card">
+                    <h3>Indústria [setor] — [estado]</h3>
+                    <p><strong>Situação:</strong> [o que a empresa fazia antes]</p>
+                    <p><strong>O que foi feito:</strong> [modalidade adotada e prazo de implantação]</p>
+                    <p><strong>Resultado:</strong> [R$ ou % de desoneração no primeiro ciclo]</p>
+                </div>
+                <div class="publico-card">
+                    <h3>[Nome, cargo, empresa]</h3>
+                    <p>"[depoimento]"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    Depoimento anônimo ("J.S., empresário") vale quase zero — use nome,
+    cargo e empresa, com autorização por escrito.
+    ============================================================
+    -->
+
+    <div class="divider-line"></div>
+
     <!-- CTA Final -->
     <section class="cta-final" id="contato">
         <div class="cta-final-content">
-            <h2>Pronto para começar?</h2>
-            <p>Nosso diagnóstico inicial é gratuito. Descubra quantos impostos sua empresa pode recuperar em poucos minutos.</p>
-            <a href="#" class="cta-btn">Solicitar Diagnóstico</a>
+            <h2>Vale a pena descobrir</h2>
+            <p>O diagnóstico de elegibilidade é gratuito e leva poucos minutos do seu tempo. Se a operação não se enquadrar, você economiza meses de esforço numa direção errada. Se enquadrar, você sai com uma estimativa concreta de desoneração.</p>
+            <a href="https://wa.me/5551992370627?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20o%20diagn%C3%B3stico%20de%20elegibilidade%20para%20drawback." target="_blank" rel="noopener" class="cta-btn">Solicitar diagnóstico</a>
         </div>
     </section>
 
@@ -725,12 +1175,21 @@
             <div class="footer-section">
                 <h4>Contato</h4>
                 <p><a href="tel:+5551992370627">(51) 99237-0627</a></p>
-                <p><a href="https://instagram.com/NexDraw.drawback" target="_blank">@NexDraw.drawback</a></p>
-                <p><a href="https://www.nexdraw.com.br" target="_blank">www.nexdraw.com.br</a></p>
+                <p><a href="https://instagram.com/NexDraw.drawback" target="_blank" rel="noopener">@NexDraw.drawback</a></p>
+                <p><a href="https://www.nexdraw.com.br" target="_blank" rel="noopener">www.nexdraw.com.br</a></p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 NexDraw. Todos os direitos reservados.</p>
+            <div class="footer-legal">
+                <p><strong>Modolo Consultoria Aduaneira Ltda.</strong> · CNPJ 67.577.369/0001-32 · São Leopoldo/RS</p>
+                <p>
+                    <a href="/politica-de-privacidade">Política de Privacidade</a> ·
+                    <a href="/termos-de-uso">Termos de Uso</a> ·
+                    <a href="/politica-de-reembolso">Política de Reembolso</a>
+                </p>
+                <p class="footer-disclaimer">O conteúdo deste site tem caráter informativo e não substitui a análise individualizada da operação nem a orientação de profissional habilitado.</p>
+            </div>
+            <p style="margin-top: 1.5rem;">&copy; 2026 NexDraw. Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>
