@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexDraw | Consultoria e Treinamento em Drawback para Indústrias Exportadoras</title>
-    <meta name="description" content="Assessoria em regime de drawback: enquadramento, ato concessório e comprovação no Siscomex. Diagnóstico de elegibilidade gratuito para indústrias exportadoras.">
+    <meta name="description" content="Gestão completa de drawback: laudo técnico, deferimento do ato concessório, conferência de DUIMPs e notas, controle de saldos e baixa do ato. Diagnóstico de elegibilidade gratuito para indústrias exportadoras.">
     <link rel="canonical" href="https://www.nexdraw.com.br/">
     <style>
         * {
@@ -932,6 +932,231 @@
                 height: 150px;
             }
         }
+
+        /* ===== ESCOPO DO SERVIÇO ===== */
+        .escopo {
+            padding: 5rem 2rem;
+            background-color: var(--cinza-claro);
+        }
+
+        .escopo-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .escopo-fases {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .escopo-fases span {
+            background-color: var(--branco);
+            border: 1px solid var(--cinza-linha);
+            border-radius: 20px;
+            padding: 0.45rem 1.1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--azul-marinho);
+        }
+
+        .escopo-fases span::before {
+            content: '●';
+            color: var(--dourado-principal);
+            margin-right: 0.5rem;
+        }
+
+        .escopo-lista {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .escopo-item {
+            background-color: var(--branco);
+            border: 1px solid var(--cinza-linha);
+            border-radius: 10px;
+            padding: 2.2rem;
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            gap: 1.8rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .escopo-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--dourado-principal), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .escopo-item:hover {
+            border-color: var(--dourado-principal);
+            box-shadow: 0 8px 24px rgba(0, 27, 79, 0.1);
+        }
+
+        .escopo-item:hover::before {
+            opacity: 1;
+        }
+
+        .escopo-num {
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            background-color: var(--azul-marinho);
+            color: var(--dourado-principal);
+            font-weight: 700;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .escopo-fase {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--dourado-principal);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .escopo-item h3 {
+            font-size: 1.25rem;
+            color: var(--azul-marinho);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .escopo-resumo {
+            font-size: 0.97rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .escopo-corpo {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 1.8rem;
+            align-items: start;
+        }
+
+        .escopo-item ul {
+            list-style: none;
+        }
+
+        .escopo-item li {
+            font-size: 0.92rem;
+            padding: 0.4rem 0;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.6;
+        }
+
+        .escopo-item li::before {
+            content: '✓';
+            color: var(--dourado-principal);
+            font-weight: bold;
+            margin-right: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .escopo-item li strong {
+            color: var(--azul-marinho);
+            margin: 0 0.25rem;
+        }
+
+        .escopo-entrega {
+            background-color: var(--cinza-claro);
+            border-left: 3px solid var(--dourado-principal);
+            border-radius: 0 6px 6px 0;
+            padding: 1rem 1.2rem;
+        }
+
+        .escopo-entrega b {
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            color: var(--dourado-principal);
+            margin-bottom: 0.3rem;
+        }
+
+        .escopo-entrega p {
+            font-size: 0.92rem;
+            color: var(--azul-marinho);
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        /* Diferenciais */
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .diferencial {
+            padding: 1.8rem 0 0 0;
+            border-top: 3px solid var(--cinza-linha);
+            transition: border-color 0.3s ease;
+        }
+
+        .diferencial:hover {
+            border-top-color: var(--dourado-principal);
+        }
+
+        .diferencial h3 {
+            font-size: 1.05rem;
+            color: var(--azul-marinho);
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+        }
+
+        .diferencial p {
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .escopo {
+                padding: 3.5rem 2rem;
+            }
+
+            .escopo-item {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 1.8rem;
+            }
+
+            .escopo-num {
+                width: 46px;
+                height: 46px;
+                font-size: 1.1rem;
+            }
+
+            .escopo-corpo {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .escopo {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .escopo-item {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -943,6 +1168,7 @@
             </div>
             <ul>
                 <li><a href="#regime">O Regime</a></li>
+                <li><a href="#escopo">Escopo</a></li>
                 <li><a href="#produtos">Soluções</a></li>
                 <li><a href="#diagnostico">Diagnóstico</a></li>
             </ul>
@@ -953,7 +1179,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Suspenda os tributos sobre os insumos que viram <span class="highlight">exportação</span></h1>
-            <p>Consultoria e treinamento em <strong>drawback</strong> para indústrias exportadoras — do enquadramento inicial ao ato concessório e à comprovação final no Siscomex, com segurança fiscal em cada etapa.</p>
+            <p>Consultoria e gestão completa de <strong>drawback</strong> para indústrias exportadoras — do laudo técnico e deferimento do ato concessório à conferência de cada DUIMP e nota, controle de saldos e baixa do ato, com segurança fiscal em cada etapa.</p>
             <a href="https://wa.me/5551992370627?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20o%20diagn%C3%B3stico%20de%20elegibilidade%20para%20drawback." target="_blank" rel="noopener" class="cta-btn">Fazer o diagnóstico de elegibilidade</a>
             <!-- Números confirmados pelo cliente em 27/07/2026. Atualize conforme evoluírem. -->
             <p class="hero-trust">
@@ -970,7 +1196,7 @@
             <h2 class="section-title" style="margin-bottom: 3rem;">O Drawback, em linguagem direta</h2>
             <p>O drawback é um <strong>regime aduaneiro especial</strong> que desonera os insumos empregados na industrialização de produtos destinados à exportação. O benefício não incide sobre o ato de exportar: ele alcança o que entra na fábrica, sempre vinculado ao compromisso de exportar o produto acabado.</p>
             <p>Nas modalidades <strong>suspensão</strong> e <strong>isenção</strong>, o regime pode alcançar Imposto de Importação, IPI, PIS/Pasep, Cofins, PIS/Cofins-Importação e AFRMM, além do ICMS conforme a legislação de cada estado.</p>
-            <p>Na prática, o ganho vem de três frentes: redução do custo do insumo, alívio de caixa ao longo do ciclo produtivo e maior competitividade do preço final no mercado externo. Em contrapartida, o regime exige controle rigoroso da vinculação entre insumo e produto exportado — e é aí que a maior parte das empresas encontra dificuldade.</p>
+            <p>Na prática, o ganho vem de três frentes: redução do custo do insumo, alívio de caixa ao longo do ciclo produtivo e maior competitividade do preço final no mercado externo. Em contrapartida, o regime exige controle rigoroso da vinculação entre insumo e produto exportado — e é aí que a maior parte das empresas encontra dificuldade: uma DUIMP vinculada errado, uma nota sem o ato, um saldo que ninguém acompanhou. É exatamente essa rotina que a NexDraw assume.</p>
             <!-- CONFERIR antes de publicar: valide a citação normativa com seu contador/advogado tributarista. Em site técnico, artigo errado custa mais caro que texto sem citação nenhuma. -->
             <div class="legal-note">
                 <strong>Base legal:</strong> Lei nº 11.945/2009 (drawback integrado), Regulamento Aduaneiro (Decreto nº 6.759/2009) e Portaria SECEX vigente. A aplicação depende da análise da operação concreta.
@@ -1022,44 +1248,155 @@
 
     <div class="divider-line"></div>
 
+    <!-- Escopo do serviço -->
+    <section class="escopo" id="escopo">
+        <div class="escopo-container">
+            <h2 class="section-title">Gestão completa do ato concessório, da abertura à baixa</h2>
+            <p class="section-subtitle">A NexDraw faz a ponte entre a sua empresa, o despachante e os fornecedores durante toda a vida do ato. Cada etapa tem uma entrega concreta.</p>
+
+            <div class="escopo-fases">
+                <span>Abertura: etapas 1 e 2</span>
+                <span>Gestão contínua: etapas 3 e 4</span>
+                <span>Encerramento: etapa 5</span>
+            </div>
+
+            <div class="escopo-lista">
+                <div class="escopo-item">
+                    <div class="escopo-num">01</div>
+                    <div>
+                        <div class="escopo-fase">Abertura</div>
+                        <h3>Laudo técnico e pedido do ato concessório</h3>
+                        <p class="escopo-resumo">Estruturamos a base técnica do ato junto à sua empresa e ao despachante, para que o pedido nasça correto.</p>
+                        <div class="escopo-corpo">
+                            <ul>
+                                <li>Levantamento do processo produtivo: insumos por produto final, consumo e perdas</li>
+                                <li>Abertura e coordenação do laudo técnico entre empresa e despachante</li>
+                                <li>Conferência de NCMs, quantidades e valores do pleito</li>
+                                <li>Montagem e registro do pedido de ato concessório no Siscomex</li>
+                            </ul>
+                            <div class="escopo-entrega"><b>ENTREGA</b><p>Laudo técnico validado e pedido de ato registrado.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="escopo-item">
+                    <div class="escopo-num">02</div>
+                    <div>
+                        <div class="escopo-fase">Abertura</div>
+                        <h3>Acompanhamento do deferimento</h3>
+                        <p class="escopo-resumo">Monitoramos a análise do pedido até o deferimento — sem que a sua equipe precise ficar consultando o sistema.</p>
+                        <div class="escopo-corpo">
+                            <ul>
+                                <li>Acompanhamento da análise do pedido junto ao órgão anuente</li>
+                                <li>Tratamento de exigências e ajustes no pleito</li>
+                                <li>Comunicação dos parâmetros do ato deferido: valores, quantidades e prazo de validade</li>
+                            </ul>
+                            <div class="escopo-entrega"><b>ENTREGA</b><p>Ato deferido e resumo dos parâmetros para as áreas envolvidas.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="escopo-item">
+                    <div class="escopo-num">03</div>
+                    <div>
+                        <div class="escopo-fase">Gestão contínua</div>
+                        <h3>Follow-up com fornecedores e conferência de vínculos</h3>
+                        <p class="escopo-resumo">Conferimos cada documento vinculado ao ato — antes que um erro vire problema na comprovação.</p>
+                        <div class="escopo-corpo">
+                            <ul>
+                                <li>Follow-up com fornecedores estrangeiros e nacionais</li>
+                                <li>Conferência da vinculação correta das DUIMPs ao ato</li>
+                                <li>Conferência das notas fiscais de aquisição no mercado interno com o ato informado</li>
+                                <li>Acompanhamento das DU-Es vinculadas para a comprovação das exportações</li>
+                                <li>Apontamento de inconsistências com orientação de correção</li>
+                            </ul>
+                            <div class="escopo-entrega"><b>ENTREGA</b><p>Relatório de conferência por documento, com pendências e correções orientadas.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="escopo-item">
+                    <div class="escopo-num">04</div>
+                    <div>
+                        <div class="escopo-fase">Gestão contínua</div>
+                        <h3>Controle de saldos e sugestão de ato</h3>
+                        <p class="escopo-resumo">Saldo sempre visível: quanto já foi utilizado, quanto falta exportar e qual ato usar em cada nova operação.</p>
+                        <div class="escopo-corpo">
+                            <ul>
+                                <li>Controle de saldos: importado, adquirido no mercado interno e exportado × compromisso do ato</li>
+                                <li>Sugestão do ato a ser informado pelo despachante na DUIMP e pelo fornecedor nacional na nota fiscal</li>
+                                <li>Alertas de saldo crítico e de prazo de validade</li>
+                                <li>Recomendação de alteração ou prorrogação do ato quando necessário</li>
+                            </ul>
+                            <div class="escopo-entrega"><b>ENTREGA</b><p>Posição periódica de saldos e status de cada ato concessório.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="escopo-item">
+                    <div class="escopo-num">05</div>
+                    <div>
+                        <div class="escopo-fase">Encerramento</div>
+                        <h3>Fechamento do ato e baixa junto ao despachante</h3>
+                        <p class="escopo-resumo">Encerramos o ciclo com tudo conciliado e documentado — pronto para qualquer fiscalização.</p>
+                        <div class="escopo-corpo">
+                            <ul>
+                                <li>Conciliação final entre importações, aquisições nacionais e exportações</li>
+                                <li>Comprovação e encerramento do ato</li>
+                                <li>Baixa junto ao despachante</li>
+                                <li>Orientação sobre eventuais saldos não utilizados</li>
+                            </ul>
+                            <div class="escopo-entrega"><b>ENTREGA</b><p>Ato encerrado e dossiê de encerramento arquivado para fiscalização.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="diferenciais-grid">
+                <div class="diferencial">
+                    <h3>Conferência preventiva</h3>
+                    <p>Cada DUIMP e nota é conferida quando entra, não meses depois, na comprovação.</p>
+                </div>
+                <div class="diferencial">
+                    <h3>Saldo sempre visível</h3>
+                    <p>Posição atualizada do que foi utilizado e do que falta exportar em cada ato.</p>
+                </div>
+                <div class="diferencial">
+                    <h3>Ponto único de contato</h3>
+                    <p>Coordenamos empresa, despachante e fornecedores — sua equipe não precisa correr atrás de ninguém.</p>
+                </div>
+                <div class="diferencial">
+                    <h3>Pronto para fiscalização</h3>
+                    <p>Documentação organizada da abertura ao dossiê de encerramento do ato.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider-line"></div>
+
     <!-- Produtos -->
     <section class="produtos" id="produtos">
         <div class="produtos-container">
-            <h2 class="section-title">Nossas Soluções</h2>
-            <p class="section-subtitle">Duas formas de trabalhar — consultoria assistida ou recursos prontos para usar</p>
+            <h2 class="section-title">Nossa Solução</h2>
+            <p class="section-subtitle">Gestão completa do regime, da abertura à baixa do ato concessório</p>
 
-            <div class="produtos-grid">
+            <div class="produtos-grid" style="max-width: 640px; margin: 0 auto;">
                 <!-- Consultoria -->
                 <div class="produto-card">
                     <div class="produto-icon">🎯</div>
-                    <h3>Consultoria em Drawback</h3>
-                    <p>Implantação assistida, do enquadramento da operação até a comprovação do regime.</p>
+                    <h3>Consultoria e Gestão de Drawback</h3>
+                    <p>A NexDraw assume a rotina do regime, da abertura à baixa do ato concessório. <a href="#escopo" style="color: var(--azul-marinho); font-weight: 600;">Ver escopo completo</a></p>
                     <ul>
-                        <li>Análise da operação e escolha da modalidade</li>
-                        <li>Estruturação da vinculação insumo × produto exportado</li>
-                        <li>Elaboração e acompanhamento do ato concessório</li>
-                        <li>Acompanhamento até a comprovação junto aos órgãos</li>
+                        <li>Laudo técnico e pedido do ato concessório</li>
+                        <li>Acompanhamento até o deferimento</li>
+                        <li>Follow-up com fornecedores e conferência de DUIMPs, notas e DU-Es</li>
+                        <li>Controle de saldos e sugestão de ato para despachante e fornecedor nacional</li>
+                        <li>Fechamento do ato e baixa junto ao despachante</li>
                         <li>Escopo, prazo e honorários em proposta formal antes do início</li>
                     </ul>
-                    <a href="https://wa.me/5551992370627?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20consultoria%20em%20drawback." target="_blank" rel="noopener" class="cta-btn">💬 Falar com um especialista</a>
-                    <p class="garantia-nota">Sob orçamento, conforme porte e complexidade da operação</p>
-                </div>
-
-                <!-- Documentos -->
-                <div class="produto-card">
-                    <div class="produto-icon">📊</div>
-                    <h3>Documentos + Planilha de Controle</h3>
-                    <p>Para quem já opera o regime e precisa organizar o controle antes que ele vire problema na comprovação.</p>
-                    <ul>
-                        <li>Planilha de controle de saldos e vinculação insumo × exportação</li>
-                        <li>Modelos de documentos e checklists de comprovação</li>
-                        <li>Instruções de uso passo a passo</li>
-                        <li>Atualizações incluídas</li>
-                        <li>Entrega imediata após a confirmação do pagamento</li>
-                    </ul>
-                    <div class="preco-produto">R$ 299</div>
-                    <!-- TROCAR: cole aqui a URL real do produto na Kiwify. -->
-                    <a href="https://wa.me/5551992370627?text=Ol%C3%A1!%20Quero%20comprar%20o%20Documentos%20%2B%20Planilha%20de%20Controle." target="_blank" rel="noopener" class="cta-btn">Comprar agora</a>
+                    <a href="https://wa.me/5551992370627?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20gest%C3%A3o%20de%20drawback." target="_blank" rel="noopener" class="cta-btn">💬 Falar com um especialista</a>
+                    <p class="garantia-nota">Sob orçamento, conforme porte, número de atos e complexidade da operação</p>
                 </div>
             </div>
         </div>
@@ -1085,13 +1422,13 @@
                 </div>
                 <div class="etapa">
                     <div class="etapa-num">ETAPA 03</div>
-                    <h3>Implantação</h3>
-                    <p>Habilitação, ato concessório e ajuste dos controles internos da empresa.</p>
+                    <h3>Abertura e gestão do ato</h3>
+                    <p>Laudo técnico, deferimento, conferência de vínculos e controle de saldos durante toda a vigência.</p>
                 </div>
                 <div class="etapa">
                     <div class="etapa-num">ETAPA 04</div>
-                    <h3>Acompanhamento</h3>
-                    <p>Suporte até a comprovação do regime junto aos órgãos competentes.</p>
+                    <h3>Encerramento</h3>
+                    <p>Fechamento do ato, baixa junto ao despachante e dossiê pronto para fiscalização.</p>
                 </div>
             </div>
         </div>
@@ -1135,7 +1472,7 @@
     <section class="cta-final" id="contato">
         <div class="cta-final-content">
             <h2>Vale a pena descobrir</h2>
-            <p>O diagnóstico de elegibilidade é gratuito e leva poucos minutos do seu tempo. Se a operação não se enquadrar, você economiza meses de esforço numa direção errada. Se enquadrar, você sai com uma estimativa concreta de desoneração.</p>
+            <p>O diagnóstico de elegibilidade é gratuito e leva poucos minutos do seu tempo. Se a operação não se enquadrar, você economiza meses de esforço numa direção errada. Se enquadrar, você sai com uma estimativa concreta de desoneração — e com quem cuide do ato do início ao fim.</p>
             <a href="https://wa.me/5551992370627?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20o%20diagn%C3%B3stico%20de%20elegibilidade%20para%20drawback." target="_blank" rel="noopener" class="cta-btn">Solicitar diagnóstico</a>
         </div>
     </section>
@@ -1149,12 +1486,12 @@
             </div>
             <div class="footer-section">
                 <h4>Produtos</h4>
-                <p><a href="#produtos">Consultoria</a></p>
-                <p><a href="#produtos">Documentos + Planilha</a></p>
-            </div>
+                <p><a href="#escopo">Escopo do serviço</a></p>
+                <p><a href="#produtos">Consultoria e Gestão</a></p>            </div>
             <div class="footer-section">
                 <h4>Contato</h4>
                 <p><a href="tel:+5551992370627">(51) 99237-0627</a></p>
+                <p><a href="mailto:graziela.modolo@nexdraw.com.br">graziela.modolo@nexdraw.com.br</a></p>
                 <p><a href="https://instagram.com/NexDraw.drawback" target="_blank" rel="noopener">@nexdraw.drawback</a></p>
                 <p><a href="https://www.nexdraw.com.br" target="_blank" rel="noopener">www.nexdraw.com.br</a></p>
             </div>
